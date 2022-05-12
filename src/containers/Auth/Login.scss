@@ -1,0 +1,77 @@
+@import "../../styles/common.scss";
+
+.login-background {
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  .login-container {
+    width: 400px;
+    height: 450px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .login-content {
+      padding: 10px;
+
+      .text-login {
+        text-align: center;
+        font-weight: 600;
+        font-size: 24px;
+        padding-top: 10px;
+      }
+      .login-input {
+        margin: 8px 0;
+      }
+      .btn-login {
+        width: 100%;
+        margin: 10px 0;
+        height: 36px;
+        border-radius: 16px;
+        outline: none;
+        border: none;
+        background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .forgot-password {
+        font-size: 12px;
+      }
+
+      .social-login {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 16px;
+        .google {
+          font-size: 25px;
+          background: #dc4e41;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          margin-right: 8px;
+        }
+        .facebook {
+          font-size: 25px;
+          background: #3b5998;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
