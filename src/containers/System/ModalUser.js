@@ -52,7 +52,6 @@ class ModalUser extends Component {
     for (let i = 0; i < arrInput.length; i++) {
       if (!this.state[arrInput[i]]) {
         valid = false;
-        console.log('awef');
         alert('Missing parameter: ' + arrInput[i]);
         break;
       }

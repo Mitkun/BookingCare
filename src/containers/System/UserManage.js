@@ -12,8 +12,8 @@ class UserManage extends Component {
 		super(props);
 		this.state = {
 			users: [],
-			openModalUser: false,
-			openModalEditUser: false,
+			isOpenModalUser: false,
+			isOpenModalEditUser: false,
 			userEdit: {},
 		}
 	}
@@ -33,19 +33,19 @@ class UserManage extends Component {
 
 	handleAddNewUser = () => {
 		this.setState({
-			openModalUser: true,
+			isOpenModalUser: true,
 		})
 	}
 
 	toggleUserModal = () => {
 		this.setState({
-			openModalUser: !this.state.openModalUser,
+			isOpenModalUser: !this.state.isOpenModalUser,
 		})
 	}
 
 	toggleEditUserModal = () => {
 		this.setState({
-			openModalEditUser: !this.state.openModalEditUser,
+			isOpenModalEditUser: !this.state.isOpenModalEditUser,
 		})
 	}
 
@@ -58,7 +58,7 @@ class UserManage extends Component {
 			} else {
 				await this.getAllUsersFromReact();
 				this.setState({
-					openModalUser: false
+					isOpenModalUser: false
 				})
 				emitter.emit('EVENT_CLEAR_MODAL_DATA')
 			}
@@ -85,7 +85,7 @@ class UserManage extends Component {
 
 	handleEditUser = (user) => {
 		this.setState({
-			openModalEditUser: true,
+			isOpenModalEditUser: true,
 			userEdit: user
 		})
 	}
@@ -95,7 +95,7 @@ class UserManage extends Component {
 			const res = await editUserApi(user)
 			if (res && res.errCode === 0) {
 				this.setState({
-					openModalEditUser: false
+					isOpenModalEditUser: false
 				})
 				this.getAllUsersFromReact()
 			} else {
@@ -161,12 +161,12 @@ class UserManage extends Component {
 					</table>
 				</div>
 				<ModalUser
-					isOpen={this.state.openModalUser}
+					isOpen={this.state.isOpenModalUser}
 					toggleFromParent={this.toggleUserModal}
 					createNewUser={this.createNewUser}
 				/>
-				{this.state.openModalEditUser && <ModalEditUser
-					isOpen={this.state.openModalEditUser}
+				{this.state.isOpenModalEditUser && <ModalEditUser
+					isOpen={this.state.isOpenModalEditUser}
 					toggleFromParent={this.toggleEditUserModal}
 					currentUser={this.state.userEdit}
 					editUser={this.editUser}
