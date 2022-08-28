@@ -15,7 +15,7 @@ class HomeHeader extends Component {
   render() {
 
     let language = this.props.language;
-    console.log('language', language);
+    
 
     return (
       <>
@@ -28,10 +28,10 @@ class HomeHeader extends Component {
             <div className='center-content'>
               <div className='child-content'>
                 <div><b><FormattedMessage id='home-header.speciality' /></b></div>
-                <div className='subs-title'>Tìm bác sỹ theo chuyên khoa</div>
+                <div className='subs-title'><FormattedMessage id='home-header.search-doctor' /></div>
               </div>
               <div className='child-content'>
-                <div><b>Cơ sở y tế</b></div>
+                <div><b><FormattedMessage id='home-header.health-facility' /></b></div>
                 <div className='subs-title'>Chọn bệnh viện phòng khám</div>
               </div>
               <div className='child-content'>

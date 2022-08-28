@@ -1,8 +1,8 @@
 {
     "home-header": {
-        "speciality": "Chuyên khoa EN",
-        "search-doctor": "Tìm bác sĩ theo chuyên khoa EN",
-        "health-facility": "Cơ sở y tế EN"
+        "speciality": "Medical specialty",
+        "search-doctor": "Find a doctor by specialty",
+        "health-facility": "Health facilities"
     },
     "common": {
         "add": "Add",
