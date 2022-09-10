@@ -7,23 +7,23 @@ const handleLoginApi = (userEmail, userPassword) => {
 };
 
 const getAllUsersApi = (inputId) => {
-  return axios.get(`/api/get-all-users?id=${inputId}`)
-}
+  return axios.get(`/api/get-all-users?id=${inputId}`);
+};
 
 const createNewUserApi = (data) => {
-  return axios.post('/api/create-new-user', data)
-}
+  return axios.post('/api/create-new-user', data);
+};
 
 const deleteUserApi = (userId) => {
-  return axios.delete('/api/delete-user', { data: { id: userId } })
-}
+  return axios.delete('/api/delete-user', { data: { id: userId } });
+};
 
 const editUserApi = (inputData) => {
-  return axios.put('/api/edit-user', inputData)
-}
+  return axios.put('/api/edit-user', inputData);
+};
 
 const getAllCodeService = (inputType) => {
-  return axios.get(`/api/allcode?type=${inputType}`)
-}
+  return axios.get(`/api/allcode?type=${inputType}`);
+};
 
 export { handleLoginApi, getAllUsersApi, createNewUserApi, deleteUserApi, editUserApi, getAllCodeService };
