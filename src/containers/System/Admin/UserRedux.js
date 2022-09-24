@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import { getAllCodeService } from '../../services/userService';
-import { LANGUAGES } from '../../utils';
-import * as action from '../../store/actions';
+import { getAllCodeService } from '../../../services/userService';
+import { LANGUAGES } from '../../../utils';
+import * as action from '../../../store/actions';
 import 'react-image-lightbox/style.css';
-import { last } from 'lodash';
+import TableManageUser from './TableManageUser';
 
 class UserRedux extends Component {
   constructor(props) {
@@ -68,6 +68,21 @@ class UserRedux extends Component {
       this.setState({
         roleArr: roleArrUpdate,
         role: roleArrUpdate?.length ? roleArrUpdate[0].keyword : '',
+      });
+    }
+
+    if (prevProps.listUsers !== this.props.listUsers) {
+      this.setState({
+        email: '',
+        password: '',
+        firstName: '',
+        lastName: '',
+        phoneNumber: '',
+        address: '',
+        gender: '',
+        position: '',
+        role: '',
+        avatar: '',
       });
     }
   }
@@ -343,11 +358,15 @@ class UserRedux extends Component {
                 </div>
               </div>
             </form>
-            <div className="col-12 mt-3">
+            <div className="col-12 my-3">
               <button className="btn btn-primary" onClick={() => this.handleSaveUser()}>
                 <FormattedMessage id="manage-user.save" />
               </button>
             </div>
+          </div>
+
+          <div className="container my-5">
+            <TableManageUser />
           </div>
         </div>
 
@@ -364,6 +383,7 @@ const mapStateToProps = (state) => {
     positionRedux: state.admin.positions,
     roleRedux: state.admin.roles,
     isLoadingGender: state.admin.isLoadingGender,
+    listUsers: state.admin.users,
   };
 };
 
@@ -373,6 +393,7 @@ const mapDispatchToProps = (dispatch) => {
     getPositionStart: () => dispatch(action.fetchPositionStart()),
     getRoleStart: () => dispatch(action.fetchRoleStart()),
     createNewUser: (data) => dispatch(action.createNewUser(data)),
+    fetchUserRedux: () => dispatch(action.fetchAllUsersStart()),
 
     // processLogout: () => dispatch(actions.processLogout()),
     // changeLanguageAppRedux: (language) => dispatch(actions.changeLanguageApp(language))
