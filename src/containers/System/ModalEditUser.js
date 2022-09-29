@@ -24,7 +24,7 @@ class ModalEditUser extends Component {
       this.setState({
         id: user.id,
         email: user.email,
-        password: 'hard code',
+        password: '123456',
         firstName: user.firstName,
         lastName: user.lastName,
         address: user.address,
