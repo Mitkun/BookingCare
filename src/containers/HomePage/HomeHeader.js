@@ -66,56 +66,58 @@ class HomeHeader extends Component {
             </div>
           </div>
         </div>
-        <div className="home-header-banner">
-          <div className="content-up">
-            <div className="title1">NỀN TẢNG Y TẾ</div>
-            <div className="title2">CHĂM SÓC SỨC KHỎE TOÀN DIỆN</div>
-            <div className="search">
-              <i className="fa fa-search"></i>
-              <input type="text" />
-            </div>
-          </div>
-          <div className="content-down">
-            <div className="options">
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-hospital-alt"></i>
-                </div>
-                <div className="text-child">Khám chuyên khoa</div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-mobile-alt"></i>
-                </div>
-                <div className="text-child">Khám từ xa</div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-hospital"></i>
-                </div>
-                <div className="text-child">Khám tổng quát</div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-flask"></i>
-                </div>
-                <div className="text-child">Xết nghiệm y học</div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-diagnoses"></i>
-                </div>
-                <div className="text-child">Sức khỏe tinh thần</div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-tooth"></i>
-                </div>
-                <div className="text-child">Khám nha khoa</div>
+        {this.props.isShowBanner === true && (
+          <div className="home-header-banner">
+            <div className="content-up">
+              <div className="title1">NỀN TẢNG Y TẾ</div>
+              <div className="title2">CHĂM SÓC SỨC KHỎE TOÀN DIỆN</div>
+              <div className="search">
+                <i className="fa fa-search"></i>
+                <input type="text" />
               </div>
             </div>
+            <div className="content-down">
+              <div className="options">
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-hospital-alt"></i>
+                  </div>
+                  <div className="text-child">Khám chuyên khoa</div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-mobile-alt"></i>
+                  </div>
+                  <div className="text-child">Khám từ xa</div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-hospital"></i>
+                  </div>
+                  <div className="text-child">Khám tổng quát</div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-flask"></i>
+                  </div>
+                  <div className="text-child">Xết nghiệm y học</div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-diagnoses"></i>
+                  </div>
+                  <div className="text-child">Sức khỏe tinh thần</div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-tooth"></i>
+                  </div>
+                  <div className="text-child">Khám nha khoa</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
       </>
     );
   }
