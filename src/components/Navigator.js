@@ -123,9 +123,9 @@ class Navigator extends Component {
 
   checkActiveMenu = () => {
     const { menus, location } = this.props;
-    outerLoop: for (let i = 0; i < menus.length; i++) {
+    outerLoop: for (let i = 0; i < menus?.length; i++) {
       const group = menus[i];
-      if (group.menus && group.menus.length > 0) {
+      if (group.menus && group.menus?.length > 0) {
         for (let j = 0; j < group.menus.length; j++) {
           const menu = group.menus[j];
           if (menu.subMenus && menu.subMenus.length > 0) {
@@ -175,7 +175,7 @@ class Navigator extends Component {
     return (
       <Fragment>
         <ul className="navigator-menu list-unstyled">
-          {menus.map((group, groupIndex) => {
+          {menus?.map((group, groupIndex) => {
             return (
               <Fragment key={groupIndex}>
                 <MenuGroupWithRouter name={group.name}>

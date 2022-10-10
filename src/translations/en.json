@@ -28,12 +28,15 @@
       "manage-admin": "Manage admins",
       "crud": "CRUD user",
       "crud-redux": "CRUD redux",
-      "clinic": "Clniic",
+      "clinic": "Clinic",
       "manage-clinic": "Manage clinic",
       "specialty": "Specialties",
       "manage-specialty": "Manage specialties",
       "handbook": "Handbook",
       "manage-handbook": "Manage handbook"
+    },
+    "doctor": {
+      "manage-schedule": "Manage doctor's schedule"
     }
   },
   "manage-user": {

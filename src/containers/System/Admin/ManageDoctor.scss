@@ -12,7 +12,7 @@
   .more-info {
     display: flex;
     gap: 15px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 
     .content-left {
       width: 40%;
@@ -31,6 +31,21 @@
     padding: 10px;
     cursor: pointer;
     background: orange;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .create-content-doctor {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background: blue;
+    color: #fff;
 
     &:hover {
       opacity: 0.8;
