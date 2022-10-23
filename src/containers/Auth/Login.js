@@ -56,7 +56,14 @@ class Login extends Component {
     }
   };
 
+  listenerEnterKey = (evn) => {
+    if (evn.code === 'Enter') {
+      this.handleLogin();
+    }
+  };
+
   render() {
+    document.addEventListener('keydown', this.listenerEnterKey);
     return (
       <div className="login-background">
         <div className="login-container">
